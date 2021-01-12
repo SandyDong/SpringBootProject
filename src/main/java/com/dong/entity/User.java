@@ -1,8 +1,11 @@
 package com.dong.entity;
 
+import lombok.Data;
+
 /**
  * 创建一个用户实体类
  */
+@Data
 public class User {
 
     private String id;
@@ -13,19 +16,4 @@ public class User {
 
     private int age;
 
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
 }
