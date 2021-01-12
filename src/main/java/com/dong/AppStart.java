@@ -15,6 +15,18 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * 注：所以SpringBoot的启动类最好是放在root package下，因为默认不指定basePackages。
  *
+ *
+ * 注释：@SpringBootApplication注解包含@EnableAutoConfiguration注解
+ * @EnableScheduling、@EnableCaching、@EnableMBeanExport等，@EnableAutoConfiguration的理念和做事方式其实一脉相承，简单概括一下就是，借助@Import的支持，收集和注册特定场景相关的bean定义。
+ *
+ *  @EnableScheduling是通过@Import将Spring调度框架相关的bean定义都加载到IoC容器。
+ *  @EnableMBeanExport是通过@Import将JMX相关的bean定义加载到IoC容器。
+ *
+ *  而@EnableAutoConfiguration也是借助@Import的帮助，将所有符合自动配置条件的bean定义加载到IoC容器，仅此而已！
+ *
+ *  @EnableAutoConfiguration会根据类路径中的jar依赖为项目进行自动配置，如：添加了spring-boot-starter-web依赖，会自动添加Tomcat和Spring MVC的依赖，Spring Boot会对Tomcat和Spring MVC进行自动配置。
+ *
+ *
  */
 
 @Log
