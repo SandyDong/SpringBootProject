@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /**
+ * ******************************************************SpringBoot自配配置原理*******************************************************
  * @SpringBootApplication 注解 包含@ComponentScan注解
  * 我们可以通过basePackages等属性来细粒度的定制@ComponentScan自动扫描的范围，
  * 如果不指定，则默认Spring框架实现会从声明@ComponentScan所在类的package进行扫描。
@@ -24,7 +25,8 @@ import org.springframework.context.annotation.ComponentScan;
  *
  *  而@EnableAutoConfiguration也是借助@Import的帮助，将所有符合自动配置条件的bean定义加载到IoC容器，仅此而已！
  *
- *  @EnableAutoConfiguration会根据类路径中的jar依赖为项目进行自动配置，如：添加了spring-boot-starter-web依赖，会自动添加Tomcat和Spring MVC的依赖，Spring Boot会对Tomcat和Spring MVC进行自动配置。
+ *  @EnableAutoConfiguration会根据类路径中的jar依赖为项目进行自动配置，如：添加了spring-boot-starter-web依赖，会自动添加Tomcat和Spring MVC的依赖，
+ *  Spring Boot会对Tomcat和Spring MVC进行自动配置。
  *
  *
  *
