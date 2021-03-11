@@ -53,6 +53,13 @@ import org.springframework.context.annotation.ComponentScan;
  *              return SpringFactoriesLoader.loadFactories(AutoConfigurationImportFilter.class, this.beanClassLoader);
  *         }
  *
+ *
+ *
+ *         追加注释：
+ *           //@AutoConfigurationPackage                             这个注解为自动导包的注解
+ *
+ *           //@Import(EnableAutoConfigurationImportSelector.class)  这个为开启自动配置选择器的注解
+ *
  */
 
 @Log
